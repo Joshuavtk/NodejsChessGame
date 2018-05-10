@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #chessboard {
+            width: 900px;
+            font-size: 80px;
+            text-align: center;
+            line-height: 105px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        #chessboard>div>div {
+            transition: .2s;
+        }
+
+        #chessboard>div>div:hover {
+            cursor: pointer;
+            font-size: 110%;
+        }
+
+        #sidebar {
+            width: 280px;
+            height: 800px;
+            background-color: lightgreen;
+            overflow-y: scroll;
+            padding: 0 20px;
+        }
+
+        #gameInfo {
+            font-size: 140%;
+            text-align: center;
+        }
+
+        .log-message {
+            text-align: left;
+            float: left;
+            width: 50%;
+        }
+
+        .log-piece {
+            font-size: 130%;
+        }
+
+        .fileLabel {
+            font-size: 22px;
+            font-weight: bold;
+            line-height: initial;
+            text-align: center;
+        }
+
+        .rankLabel {
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 100px;
+            text-align: left;
+        }
+
+        body,
+        html {
+            margin: 0;
+            background-color: #eeeeee;
+            display: flex;
+            font-family: sans-serif;
+        }
+    </style>
+    <title>Chess game</title>
+    <script src="model/chessboardModel.js"></script>
+    <script src="model/chesspieceModel.js"></script>
+    <script src="view/chessboardView.js"></script>
+    <script src="view/chesspieceView.js"></script>
+    <script src="controller/chessboard.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <p>Have both players put in the same id</p>
+        <input type="text" id="sessionId">
+        <button onclick="chessboardController.init()">Start game.</button>
+
+    </div>
+    <div id="sidebar">
+        <h1>History:</h1>
+        <p id="gameInfo"></p>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="server.js"></script>
+</body>
+
+</html>

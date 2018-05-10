@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>website</title>
+    <link rel="stylesheet" href="styler.css" type="text/css">
+  </head>
+  <body>
+
+    <h1>h1</h1>
+    <p>whup tee doo</p>
+    <input type="text" id="myInput"><br>
+    <button id="myButton" value="Send" onclick="socket.emit('init', 'hoi');">Send</button>
+    <div id="myBox">
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

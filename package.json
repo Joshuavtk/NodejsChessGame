@@ -1,0 +1,14 @@
+{
+  "name": "chat-box",
+  "version": "1.0.0",
+  "description": "chatbox met socket-io",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^2.0.3"
+  }
+}
