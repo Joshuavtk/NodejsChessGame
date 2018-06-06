@@ -129,6 +129,8 @@ class chessPiece {
                             if (possiblePositionElement.className === "") { // Path is empty
                                 chessboardModel.possiblePathPlace[chessboardModel.possiblePathPlace.length] = possibleFile + possibleRank;
                                 chessboardModel.showPath(possiblePositionElement, possiblePositionId);
+                            } else {
+                                break;
                             }
                         }
                     }
@@ -247,6 +249,8 @@ class chessPiece {
                             if (possiblePositionElement.className === "") { // Path is empty
                                 chessboardModel.possiblePathPlace[chessboardModel.possiblePathPlace.length] = possibleFile + possibleRank;
                                 chessboardModel.showPath(possiblePositionElement, possiblePositionId);
+                            } else {
+                                break;
                             }
                         }
                     }
