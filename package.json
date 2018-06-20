@@ -2,14 +2,15 @@
   "name": "chat-box",
   "version": "1.0.0",
   "description": "chatbox met socket-io",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node server.js"
   },
   "author": "Joshua van 't Kruis",
   "license": "ISC",
   "dependencies": {
-    "socket.io": "^2.0.3"
+    "socket.io": "^2.0.3",
+    "express": "4.16.3"
   }
 }

@@ -30,7 +30,7 @@ chessboardModel.init = (playerColor) => {
     chessboardModel.selectedPlaceColor = "";
     chessboardModel.selectedPlace = "";
     chessboardModel.possiblePathPlace = [''];
-    chessboardModel.possiblePathPlaceId = [''];
+    chessboardModel.possiblePathPlaceIds = [''];
     chessboardModel.possiblePathPlaceColor = [''];
 
     // Your side
@@ -113,12 +113,14 @@ chessboardModel.showPath = (possiblePositionElement, possiblePositionId, enemyPi
     // Save variables for reverting the color back
     let length = chessboardModel.possiblePathPlaceColor.length;
     chessboardModel.possiblePathPlaceColor[length] = possiblePositionElement.style.backgroundColor;
-    chessboardModel.possiblePathPlaceId[chessboardModel.possiblePathPlaceId.length] = possiblePositionId;
+    chessboardModel.possiblePathPlaceIds[chessboardModel.possiblePathPlaceIds.length] = possiblePositionId;
 
     // Set highlighting color
-    let color = (chessboardModel.possiblePathPlaceColor[length] === "rgb(255, 164, 0)") ? "rgb(255, 104, 43)" : "rgb(235, 130, 39)";
+    let color = "rgb(235, 130, 39)";
     if (enemyPieceOnPath) {
         color = "rgb(255, 52, 16)";
+    } else if ("rgb(255, 164, 0)" === chessboardModel.possiblePathPlaceColor[length]) {
+        color = "rgb(255, 104, 43)";
     }
     possiblePositionElement.style.backgroundColor = color;
 };
